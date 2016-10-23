@@ -18,4 +18,16 @@ class TweetsController extends Controller
   {
     return view('tweets.create');
   }
+  public function store(Request $request)
+  {
+    Tweet::create(
+      array(
+        'name' => $request->name,
+        'image' => $request->image,
+        'text' => $request->text
+      )
+    );
+
+    return view('tweets.store');
+  }
 }

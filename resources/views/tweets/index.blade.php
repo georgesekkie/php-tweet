@@ -8,5 +8,6 @@
       <span class="name">{{ $tweet->name }}</span>
     </div>
   @endforeach
+  {{ $tweets->render() }}
 </div>
 @endsection
